@@ -10,7 +10,6 @@ import com.example.jingbin.designpattern.app.EMTagHandler;
 import com.example.jingbin.designpattern.databinding.ActivityBridgeBinding;
 
 /**
- * @author jingbin
  * 桥接（Bridge）是用于把抽象化与实现化解耦，使得二者可以独立变化。
  * 这种类型的设计模式属于结构型模式，它通过提供抽象化和实现化之间的桥接结构，来实现二者的解耦。
  * <p>
@@ -27,13 +26,13 @@ public class BridgeActivity extends AppCompatActivity {
         binding.tvDefine.setText(EMTagHandler.fromHtml(Constants.BRIDGE_DEFINE));
 
         binding.btRed.setOnClickListener(v -> {
-            // 画红圆
+            //画红圆
             Circle circle = new Circle(10, 10, 100, new RedCircle());
             circle.draw();
         });
 
         binding.btGreen.setOnClickListener(v -> {
-            // 画绿圆
+            //画绿圆
             Circle circle = new Circle(20, 20, 100, new GreenCircle());
             circle.draw();
         });

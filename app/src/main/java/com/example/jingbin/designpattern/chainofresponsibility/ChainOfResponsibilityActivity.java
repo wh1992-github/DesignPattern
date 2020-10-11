@@ -13,7 +13,6 @@ import com.example.jingbin.designpattern.chainofresponsibility.impl.FileLogger;
 import com.example.jingbin.designpattern.databinding.ActivityChainOfResponsibilityBinding;
 
 /**
- * @author jingbin
  * 责任链模式（Chain of Responsibility Pattern）为请求创建了一个接收者对象的链。
  * 这种模式给予请求的类型，对请求的发送者和接收者进行解耦。这种类型的设计模式属于行为型模式。
  * <p>
@@ -34,21 +33,21 @@ public class ChainOfResponsibilityActivity extends AppCompatActivity {
         setTitle("责任链模式");
         binding.tvDefine.setText(EMTagHandler.fromHtml(Constants.CHAIN_OF_RESPONSIBILITY_DEFINE));
 
-        // 3. 创建不同类型的记录器。赋予它们不同的错误级别，并在每个记录器中设置下一个记录器。每个记录器中的下一个记录器代表的是链的一部分。
+        //3. 创建不同类型的记录器。赋予它们不同的错误级别，并在每个记录器中设置下一个记录器。每个记录器中的下一个记录器代表的是链的一部分。
         final AbstractLogger logger = getChainOfLoggers();
         binding.btInfo.setOnClickListener(v -> {
-            // ---: Standard Console::Logger  this is an information.
+            //---: Standard Console::Logger  this is an information.
             logger.logMessage(AbstractLogger.INFO, "this is an information.");
         });
         binding.btDebug.setOnClickListener(v -> {
-            // ---: File::Logger  this is a debug level information.
-            // ---: Standard Console::Logger  this is a debug level information.
+            //---: File::Logger  this is a debug level information.
+            //---: Standard Console::Logger  this is a debug level information.
             logger.logMessage(AbstractLogger.DEBUG, "this is a debug level information.");
         });
         binding.btError.setOnClickListener(v -> {
-            // ---: Error Console::Logger  this is a error level information.
-            // ---: File::Logger  this is a error level information.
-            // ---: Standard Console::Logger  this is a error level information.
+            //---: Error Console::Logger  this is a error level information.
+            //---: File::Logger  this is a error level information.
+            //---: Standard Console::Logger  this is a error level information.
             logger.logMessage(AbstractLogger.ERROR, "this is a error level information.");
         });
 

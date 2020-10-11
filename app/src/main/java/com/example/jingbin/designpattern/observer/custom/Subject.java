@@ -1,10 +1,10 @@
 package com.example.jingbin.designpattern.observer.custom;
 
-
 /**
  * Created by test on 2016/10/21.
  * 专题接口,所有的主题必须实现此接口
  */
+
 public interface Subject {
 
     /**

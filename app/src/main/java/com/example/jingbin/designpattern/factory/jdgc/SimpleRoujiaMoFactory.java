@@ -7,8 +7,8 @@ package com.example.jingbin.designpattern.factory.jdgc;
 
 public class SimpleRoujiaMoFactory {
 
-    public RoujiaMo creatRoujiaMo(String type) {
-        RoujiaMo roujiaMo = null;
+    public RoujiaMo createRoujiaMo(String type) {
+        RoujiaMo roujiaMo;
         switch (type) {
             case "Suan":
                 roujiaMo = new ZSuanRoujiaMo();

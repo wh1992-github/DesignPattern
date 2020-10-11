@@ -5,7 +5,7 @@ import android.util.Log;
 /**
  * Log.v 的输出为黑色,输出大于或等于VERBOSE日志级别的信息
  * Log.d 的输出是蓝色,输出大于或等于DEBUG日志级别的信息
- * LogUtil.i 的输出为绿色,输出大于或等于INFO日志级别的信息
+ * Log.i 的输出为绿色,输出大于或等于INFO日志级别的信息
  * Log.w 的输出为橙色,输出大于或等于WARN日志级别的信息
  * Log.e 的输出为红色,仅输出ERROR日志级别的信息
  */

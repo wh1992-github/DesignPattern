@@ -32,7 +32,7 @@ public class Circle implements Shape {
 
     @Override
     public void draw() {
-        LogUtil.i(TAG, "Circle: Draw() [Color : " + color
-                + ", x : " + x + ", y :" + y + ", radius :" + radius);
+        LogUtil.i(TAG, "Draw: [Color = " + color
+                + ", x = " + x + ", y = " + y + ", radius = " + radius + "]");
     }
 }

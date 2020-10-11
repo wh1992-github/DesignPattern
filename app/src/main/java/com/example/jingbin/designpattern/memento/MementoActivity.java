@@ -11,7 +11,6 @@ import com.example.jingbin.designpattern.app.LogUtil;
 import com.example.jingbin.designpattern.databinding.ActivityMementoBinding;
 
 /**
- * @author jingbin
  * 备忘录模式（Memento Pattern）保存一个对象的某个状态，以便在适当的时候恢复对象。备忘录模式属于行为型模式。
  * <p>
  * 主要解决：所谓备忘录模式就是在不破坏封装的前提下，捕获一个对象的内部状态，
@@ -28,27 +27,27 @@ public class MementoActivity extends AppCompatActivity {
         setTitle("备忘录模式");
         binding.tvDefine.setText(EMTagHandler.fromHtml(Constants.MEMENTO_DEFINE));
 
-        // 4. 使用 CareTaker 和 Originator 对象。
+        //4. 使用 CareTaker 和 Originator 对象。
         binding.btUseMemento.setOnClickListener(v -> {
-            // 管理者
+            //管理者
             CareTaker careTaker = new CareTaker();
 
             Originator originator = new Originator();
             originator.setState("State #1");
             originator.setState("State #2");
 
-            // 保存状态
+            //保存状态
             careTaker.add(originator.setSateToMemento());
 
             originator.setState("State #3");
 
-            // 保存状态
+            //保存状态
             careTaker.add(originator.setSateToMemento());
 
             originator.setState("State #4");
 
             LogUtil.i(TAG, "Current State: " + originator.getState());
-            // 得到保存的状态
+            //得到保存的状态
             String fromMemento1 = originator.getStateFromMemento(careTaker.get(0));
             LogUtil.i(TAG, "First Saved State: " + fromMemento1);
             String fromMemento2 = originator.getStateFromMemento(careTaker.get(1));

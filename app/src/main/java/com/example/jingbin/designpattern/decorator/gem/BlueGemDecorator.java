@@ -9,11 +9,11 @@ import com.example.jingbin.designpattern.decorator.IEquip;
  * 这与武器等不同,它是可以累加的,而武器不能
  */
 
-public class BlueGemDecotator implements IEuipDecotator {
+public class BlueGemDecorator implements IEuipDecorator {
 
     private IEquip iEquip;
 
-    public BlueGemDecotator(IEquip iEquip) {
+    public BlueGemDecorator(IEquip iEquip) {
         this.iEquip = iEquip;
     }
 

@@ -21,14 +21,14 @@ public abstract class RoujiaMoStore {
 
     public abstract RoujiaMo sellRoujiaMo(String type);
 
-//   public RoujiaMo sellRoujiaMo(String type) {
+//  public RoujiaMo sellRoujiaMo(String type) {
 //
-//       RoujiaMo roujiaMo = creatRoujiaMo(type);
-//       roujiaMo.prepare();
-//       roujiaMo.fire();
-//       roujiaMo.pack();
-//       return roujiaMo;
+//      RoujiaMo roujiaMo = creatRoujiaMo(type);
+//      roujiaMo.prepare();
+//      roujiaMo.fire();
+//      roujiaMo.pack();
+//      return roujiaMo;
 //
-//   }
+//  }
 
 }

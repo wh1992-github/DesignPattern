@@ -20,9 +20,9 @@ public class ShapeCache {
         return (Shape) shapeCache.clone();
     }
 
-    // 对每种形状都运行数据库查询，并创建该形状
-    // shapeMap.put(shapeKey, shape);
-    // 例如，我们要添加三种形状
+    //对每种形状都运行数据库查询，并创建该形状
+    //shapeMap.put(shapeKey, shape);
+    //例如，我们要添加三种形状
     public static void loadCache() {
         Circle circle = new Circle();
         circle.setId("1");

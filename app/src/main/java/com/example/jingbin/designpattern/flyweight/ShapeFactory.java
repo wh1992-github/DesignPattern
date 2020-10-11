@@ -12,15 +12,11 @@ import java.util.HashMap;
 public class ShapeFactory {
     private static final String TAG = "ShapeFactory";
 
-    private static final HashMap<String, Shape> circleMap = new HashMap<String, Shape>();
+    private static final HashMap<String, Shape> circleMap = new HashMap<>();
 
     public static Shape getShape(String color) {
-        Shape shape = circleMap.get(color);
-        if (shape == null) {
-            shape = new Circle(color);
-            circleMap.put(color, shape);
-            LogUtil.i(TAG, "Creating circle of color : " + color);
-        }
+        Shape shape = circleMap.computeIfAbsent(color, s -> new Circle(s));
+        LogUtil.i(TAG, "Creating circle of color : " + color);
         return shape;
     }
 

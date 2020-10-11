@@ -14,8 +14,7 @@ public class Product {
     private String type;
 
     public void showProduct() {
-        LogUtil.i(TAG, "名称：" + name);
-        LogUtil.i(TAG, "型号：" + type);
+        LogUtil.i(TAG, "名称 = " + name + ", 型号 = " + type);
     }
 
     public void setName(String name) {

@@ -18,7 +18,7 @@ public abstract class RoujiaMo {
         Meet meet = roujiaMoYLFactory.createMeet();
         YuanLiao yuanLiao = roujiaMoYLFactory.createYuanLiao();
 
-        LogUtil.i(TAG, "使用官方的原料 ---" + name + ": 揉面-剁肉-完成准备工作 yuanLiao:" + meet + "yuanLiao:" + yuanLiao);
+        LogUtil.i(TAG, "使用官方的原料: " + name + ": 揉面-剁肉-完成准备工作 yuanLiao = " + meet + ", yuanLiao = " + yuanLiao);
     }
 
     /**

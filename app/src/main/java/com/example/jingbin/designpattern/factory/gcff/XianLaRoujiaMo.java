@@ -6,9 +6,9 @@ import com.example.jingbin.designpattern.factory.jdgc.RoujiaMo;
  * Created by test on 2016/10/25.
  */
 
-public class XianSuanRoujiMo extends RoujiaMo {
+public class XianLaRoujiaMo extends RoujiaMo {
 
-    public XianSuanRoujiMo() {
-        this.name = "西安 酸肉夹馍";
+    public XianLaRoujiaMo() {
+        this.name = "西安 辣肉夹馍";
     }
 }

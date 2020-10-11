@@ -14,7 +14,6 @@ import com.example.jingbin.designpattern.interpreter.expressionimpl.OrExpression
 import com.example.jingbin.designpattern.interpreter.expressionimpl.TerminalExpression;
 
 /**
- * @author jingbin
  * 解释器模式（Interpreter Pattern）提供了评估语言的语法或表达式的方式，它属于行为型模式。
  * 这种模式实现了一个表达式接口，该接口解释一个特定的上下文。这种模式被用在 SQL 解析、符号处理引擎等。
  * <p>
@@ -31,16 +30,16 @@ public class InterpreterActivity extends AppCompatActivity {
         setTitle("解释器模式");
         binding.tvDefine.setText(EMTagHandler.fromHtml(Constants.INTERPRETER_DEFINE));
 
-        // 3. InterpreterPatternDemo 使用 Expression 类来创建规则，并解析它们
+        //3. InterpreterPatternDemo 使用 Expression 类来创建规则，并解析它们
         binding.btMan.setOnClickListener(v -> {
             Expression maleExpression = getMaleExpression();
-            // jingbin is male: true
+            //jingbin is male: true
             LogUtil.i(TAG, "jingbin is male: " + maleExpression.interpreter("jingbin"));
         });
 
         binding.btMarriedWoman.setOnClickListener(v -> {
             Expression womanExpression = getMarriedWomanExpression();
-            // Julie is married woman: true
+            //Julie is married woman: true
             LogUtil.i(TAG, "Julie is married woman: " + womanExpression.interpreter("Married Julie"));
         });
     }

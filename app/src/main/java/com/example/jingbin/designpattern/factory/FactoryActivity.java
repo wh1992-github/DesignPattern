@@ -31,7 +31,7 @@ import butterknife.ButterKnife;
  * <p>
  * <p>
  * 1、静态工厂模式
- * 这个最常见了，项目中的辅助类，TextUtil.isEmpty等，类+静态方法。下面开始详细介绍：略
+ * 这个最常见了，项目中的辅助类，TextUtil.isEmpty等，类 + 静态方法。下面开始详细介绍：略
  */
 
 public class FactoryActivity extends AppCompatActivity implements View.OnClickListener {
@@ -75,7 +75,7 @@ public class FactoryActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bt_static_factory://1.静态工厂模式
-                Toast.makeText(this, "TextUtil.isEmpty等，类+静态方法.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "TextUtil.isEmpty等，类 + 静态方法.", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.bt_simple_factory: //2.简单工厂模式 (店里卖肉夹馍)
                 //通过专门定义一个类来负责创建其他类的实例，被创建的实例通常都具有共同的父类。
@@ -95,6 +95,8 @@ public class FactoryActivity extends AppCompatActivity implements View.OnClickLi
                 //定义：提供一个接口，用于创建相关的或依赖对象的家族，而不需要明确指定具体类。
                 XianRoujiaMoTeSeStore xianRoujiaMoTeSeStore = new XianRoujiaMoTeSeStore(new XianSimpleRoujiaMoTeSeFactory());
                 xianRoujiaMoTeSeStore.sellRoujiaMo("suan");
+                xianRoujiaMoTeSeStore.sellRoujiaMo("Tian");
+                xianRoujiaMoTeSeStore.sellRoujiaMo("La");
                 break;
             default:
                 break;

@@ -8,20 +8,20 @@ package com.example.jingbin.designpattern.factory.cxgc;
 
 public class XianSimpleRoujiaMoTeSeFactory {
 
-    public RoujiaMo creatRoujiaMo(String type) {
-        RoujiaMo roujiaMo = null;
+    public RoujiaMo createRoujiaMo(String type) {
+        RoujiaMo roujiaMo;
         switch (type) {
             case "Suan":
-                roujiaMo = new XianSuanRoujiMo();
+                roujiaMo = new XianSuanRoujiaMo();
                 break;
             case "La":
-//               roujiaMo = new XianKuRoujiMo();
+                roujiaMo = new XianKuRoujiaMo();
                 break;
             case "Tian":
-//               roujiaMo = new XianlaRoujiMo();
+                roujiaMo = new XianLaRoujiaMo();
                 break;
             default://默认为酸肉夹馍
-                roujiaMo = new XianSuanRoujiMo();
+                roujiaMo = new XianSuanRoujiaMo();
                 break;
         }
         return roujiaMo;

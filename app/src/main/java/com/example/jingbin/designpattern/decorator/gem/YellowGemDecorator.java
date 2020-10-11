@@ -4,16 +4,16 @@ import com.example.jingbin.designpattern.decorator.IEquip;
 
 /**
  * Created by test on 2016/11/1.
- * 红宝石装饰品
- * 每颗攻击力: +15
+ * 黄宝石装饰品
+ * 每颗攻击力: +10
  * 这与武器等不同,它是可以累加的,而武器不能
  */
 
-public class RedGemDecotator implements IEuipDecotator {
+public class YellowGemDecorator implements IEuipDecorator {
 
     private IEquip iEquip;
 
-    public RedGemDecotator(IEquip iEquip) {
+    public YellowGemDecorator(IEquip iEquip) {
         this.iEquip = iEquip;
     }
 
@@ -22,11 +22,11 @@ public class RedGemDecotator implements IEuipDecotator {
      */
     @Override
     public int calculateAttack() {
-        return 15 + iEquip.calculateAttack();
+        return 10 + iEquip.calculateAttack();
     }
 
     @Override
     public String description() {
-        return iEquip.description() + "+ 红宝石";
+        return iEquip.description() + "+ 黄宝石";
     }
 }

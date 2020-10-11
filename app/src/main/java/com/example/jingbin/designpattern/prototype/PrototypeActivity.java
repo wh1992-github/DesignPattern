@@ -11,7 +11,6 @@ import com.example.jingbin.designpattern.app.LogUtil;
 import com.example.jingbin.designpattern.databinding.ActivityPrototypeBinding;
 
 /**
- * @author jingbin
  * 原型模式（Prototype Pattern）
  * 是用于创建重复的对象，同时又能保证性能。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
  * 使用场景：
@@ -25,6 +24,7 @@ import com.example.jingbin.designpattern.databinding.ActivityPrototypeBinding;
  */
 
 public class PrototypeActivity extends AppCompatActivity {
+    private static final String TAG = "PrototypeActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,22 +33,22 @@ public class PrototypeActivity extends AppCompatActivity {
         setTitle("原型模式");
         binding.tvDefine.setText(EMTagHandler.fromHtml(Constants.PROTOTYPE_DEFINE));
 
-        // 使用 ShapeCache 类来获取存储在 Hashtable 中的形状的克隆。
+        //使用 ShapeCache 类来获取存储在 Hashtable 中的形状的克隆。
         ShapeCache.loadCache();
 
         binding.btCircle.setOnClickListener(v -> {
             Shape shapeCache = ShapeCache.getShape("1");
-            LogUtil.i("Prototype", "Shape: " + shapeCache.type);
+            LogUtil.i(TAG, "Shape: " + shapeCache.type);
         });
 
         binding.btRectangle.setOnClickListener(v -> {
             Shape shapeCache = ShapeCache.getShape("2");
-            LogUtil.i("Prototype", "Shape: " + shapeCache.type);
+            LogUtil.i(TAG, "Shape: " + shapeCache.type);
         });
 
         binding.btSquare.setOnClickListener(v -> {
             Shape shapeCache = ShapeCache.getShape("3");
-            LogUtil.i("Prototype", "Shape: " + shapeCache.type);
+            LogUtil.i(TAG, "Shape: " + shapeCache.type);
         });
 
     }

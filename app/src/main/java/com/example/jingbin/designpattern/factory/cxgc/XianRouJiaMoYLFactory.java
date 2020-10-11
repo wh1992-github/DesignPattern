@@ -5,7 +5,7 @@ package com.example.jingbin.designpattern.factory.cxgc;
  * 西安的肉夹馍原料工厂,是西安的特色原料,还有其他分店的特色原料
  */
 
-public class XianRouJiaMoYLFoctory implements RouJiaMoYLFactory {
+public class XianRouJiaMoYLFactory implements RouJiaMoYLFactory {
 
     @Override
     public Meet createMeet() {

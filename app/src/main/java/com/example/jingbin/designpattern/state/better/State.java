@@ -8,6 +8,7 @@ package com.example.jingbin.designpattern.state.better;
  * 下面首先定义一个状态的超类型：
  * 状态的接口:
  */
+
 public interface State {
     /**
      * 放钱

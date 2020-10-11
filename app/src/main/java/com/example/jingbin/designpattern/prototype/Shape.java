@@ -7,7 +7,7 @@ import com.example.jingbin.designpattern.app.LogUtil;
  * 1. 创建一个实现了 Cloneable 接口的抽象类。
  */
 public abstract class Shape implements Cloneable {
-
+    private static final String TAG = "Shape";
     private String id;
     protected String type;
 
@@ -27,7 +27,7 @@ public abstract class Shape implements Cloneable {
         try {
             object = super.clone();
         } catch (CloneNotSupportedException e) {
-            LogUtil.i("--", e.getMessage());
+            LogUtil.i(TAG, "CloneNotSupportedException = " + e.getMessage());
         }
         return object;
     }

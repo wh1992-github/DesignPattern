@@ -11,7 +11,7 @@ public class GreenCircle implements DrawAPI {
 
     @Override
     public void drawCircle(int radius, int x, int y) {
-        LogUtil.i(TAG, "Drawing Circle[ color: green, radius: "
-                + radius + ", x: " + x + ", y: " + y + "]");
+        LogUtil.i(TAG, "drawCircle: [Color: green, radius: "
+                + radius + ", x = " + x + ", y = " + y + "]");
     }
 }

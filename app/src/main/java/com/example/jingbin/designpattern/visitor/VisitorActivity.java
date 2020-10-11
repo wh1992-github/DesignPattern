@@ -11,7 +11,6 @@ import com.example.jingbin.designpattern.databinding.ActivityVisitorBinding;
 import com.example.jingbin.designpattern.visitor.impl.Computer;
 
 /**
- * @author jingbin
  * 在访问者模式（Visitor Pattern）中，我们使用了一个访问者类，它改变了元素类的执行算法。
  * 通过这种方式，元素的执行算法可以随着访问者改变而改变。
  * 这种类型的设计模式属于行为型模式。根据模式，元素对象已接受访问者对象，这样访问者对象就可以处理元素对象上的操作。
@@ -28,7 +27,7 @@ public class VisitorActivity extends AppCompatActivity {
         setTitle("访问者模式");
         binding.tvDefine.setText(EMTagHandler.fromHtml(Constants.VISITOR_DEFINE));
 
-        // 5. 使用 ComputerPartDisplayVisitor 来显示 Computer 的组成部分。
+        //5. 使用 ComputerPartDisplayVisitor 来显示 Computer 的组成部分。
         binding.btComputer.setOnClickListener(v -> {
             ComputerPart computer = new Computer();
             computer.accept(new ComputerPartDisplayVisitor());

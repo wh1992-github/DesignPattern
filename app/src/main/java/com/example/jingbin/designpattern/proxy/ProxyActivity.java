@@ -10,7 +10,6 @@ import com.example.jingbin.designpattern.app.EMTagHandler;
 import com.example.jingbin.designpattern.databinding.ActivityProxyBinding;
 
 /**
- * @author jingbin
  * 在代理模式（Proxy Pattern）中，一个类代表另一个类的功能。这种类型的设计模式属于结构型模式。
  * <p>
  * 在代理模式中，我们创建具有现有对象的对象，以便向外界提供功能接口。
@@ -32,14 +31,14 @@ public class ProxyActivity extends AppCompatActivity {
         setTitle("代理模式");
         binding.tvDefine.setText(EMTagHandler.fromHtml(Constants.PROXY_DEFINE));
 
-        // 3. 当被请求时，使用 ProxyImage 来获取 RealImage 类的对象。
+        //3. 当被请求时，使用 ProxyImage 来获取 RealImage 类的对象。
         final Image image = new ProxyImage("test_10mb.png");
         binding.btDisk.setOnClickListener(v -> {
-            // 第一次是new的，图像从磁盘加载
+            //第一次是new的，图像从磁盘加载
             image.display();
         });
         binding.btNoDisk.setOnClickListener(v -> {
-            // 第二次取缓存，图像不需要从磁盘加载
+            //第二次取缓存，图像不需要从磁盘加载
             image.display();
         });
     }

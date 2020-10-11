@@ -10,7 +10,6 @@ import com.example.jingbin.designpattern.app.EMTagHandler;
 import com.example.jingbin.designpattern.databinding.ActivityFlyweightBinding;
 
 /**
- * @author jingbin
  * 享元模式（Flyweight Pattern）
  * 主要用于减少创建对象的数量，以减少内存占用和提高性能。
  * 这种类型的设计模式属于结构型模式，它提供了减少对象数量从而改善应用所需的对象结构的方式。
@@ -18,7 +17,7 @@ import com.example.jingbin.designpattern.databinding.ActivityFlyweightBinding;
 
 public class FlyweightActivity extends AppCompatActivity {
 
-    private static final String color[] = {"Red", "Blue", "Yellow", "White", "Black"};
+    private static final String colors[] = {"Red", "Blue", "Yellow", "White", "Black"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +27,8 @@ public class FlyweightActivity extends AppCompatActivity {
         binding.tvDefine.setText(EMTagHandler.fromHtml(Constants.FLYWEIGHT_DEFINE));
 
         binding.btGetCircle.setOnClickListener(v -> {
-            // 4. 使用该工厂，通过传递颜色信息来获取实体类的对象。
-            for (int i = 0; i < 20; i++) {
+            //4. 使用该工厂，通过传递颜色信息来获取实体类的对象。
+            for (int i = 0; i < 8; i++) {
                 Circle circle = (Circle) ShapeFactory.getShape(getRandomColor());
                 circle.setX(getRandomX());
                 circle.setY(getRandomY());
@@ -37,21 +36,20 @@ public class FlyweightActivity extends AppCompatActivity {
                 circle.draw();
             }
         });
-
     }
 
     /**
-     * 0.0-1.0  * [1-6]
+     * Math.random() >= 0.0 && Math.random() < 1.0
      */
-    private static String getRandomColor() {
-        return color[(int) (Math.random() * color.length)];
+    private String getRandomColor() {
+        return colors[(int) (Math.random() * colors.length)];
     }
 
-    private static int getRandomX() {
+    private int getRandomX() {
         return (int) (Math.random() * 100);
     }
 
-    private static int getRandomY() {
+    private int getRandomY() {
         return (int) (Math.random() * 100);
     }
 }

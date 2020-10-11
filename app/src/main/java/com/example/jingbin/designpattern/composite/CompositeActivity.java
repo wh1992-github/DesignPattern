@@ -11,7 +11,6 @@ import com.example.jingbin.designpattern.app.LogUtil;
 import com.example.jingbin.designpattern.databinding.ActivityCompositeBinding;
 
 /**
- * @author jingbin
  * 组合模式（Composite Pattern），又叫部分整体模式，是用于把一组相似的对象当作一个单一的对象。
  * 组合模式依据树形结构来组合对象，用来表示部分以及整体层次。
  * 这种类型的设计模式属于结构型模式，它创建了对象组的树形结构。
@@ -32,7 +31,7 @@ public class CompositeActivity extends AppCompatActivity {
         setTitle("组合模式");
         binding.tvDefine.setText(EMTagHandler.fromHtml(Constants.COMPOSITE_DEFINE));
 
-        // 2. 使用 Employee 类来创建和打印员工的层次结构。
+        //2. 使用 Employee 类来创建和打印员工的层次结构。
         final Employee ceo = new Employee("John", "CEO", 30000);
 
         Employee headSales = new Employee("Robert", "Head sales", 20000);
@@ -55,7 +54,7 @@ public class CompositeActivity extends AppCompatActivity {
         headMarketing.add(clerk2);
 
         binding.btCeo.setOnClickListener(v -> {
-            LogUtil.i(TAG, ceo.toString());
+            LogUtil.i(TAG, "ceo = " + ceo.toString());
             /*
              * Employee{name='John', dept='CEO', salary=30000,
              * subordinates=[Employee{name='Robert', dept='Head sales', salary=20000,
