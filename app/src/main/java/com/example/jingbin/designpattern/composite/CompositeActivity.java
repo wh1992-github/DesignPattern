@@ -35,7 +35,6 @@ public class CompositeActivity extends AppCompatActivity {
         final Employee ceo = new Employee("John", "CEO", 30000);
 
         Employee headSales = new Employee("Robert", "Head sales", 20000);
-
         Employee headMarketing = new Employee("Michel", "Head Marketing", 20000);
 
         Employee clerk1 = new Employee("Laura", "Marketing", 10000);
@@ -55,16 +54,6 @@ public class CompositeActivity extends AppCompatActivity {
 
         binding.btCeo.setOnClickListener(v -> {
             LogUtil.i(TAG, "ceo = " + ceo.toString());
-            /*
-             * Employee{name='John', dept='CEO', salary=30000,
-             * subordinates=[Employee{name='Robert', dept='Head sales', salary=20000,
-             * subordinates=[
-             * Employee{name='Richard', dept='Sales', salary=10000, subordinates=[]},
-             * Employee{name='Rob', dept='Sales', salary=10000, subordinates=[]}]},
-             * Employee{name='Michel', dept='Head Marketing', salary=20000,
-             * subordinates=[Employee{name='Laura', dept='Marketing', salary=10000, subordinates=[]},
-             * Employee{name='Bob', dept='Marketing', salary=10000, subordinates=[]}]}]}
-             */
         });
 
     }

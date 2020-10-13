@@ -1,8 +1,6 @@
 package com.example.jingbin.designpattern.command;
 
-import android.widget.Toast;
-
-import com.example.jingbin.designpattern.app.PatternApplication;
+import com.example.jingbin.designpattern.app.LogUtil;
 
 /**
  * Created by test on 2016/10/31.
@@ -10,9 +8,10 @@ import com.example.jingbin.designpattern.app.PatternApplication;
  */
 
 public class NoCommand implements Command {
+    private static final String TAG = "NoCommand";
 
     @Override
     public void execute() {
-        Toast.makeText(PatternApplication.getInstance(), "哥们,这个没效!", Toast.LENGTH_SHORT).show();
+        LogUtil.i(TAG, "execute: 这个命令无效!");
     }
 }

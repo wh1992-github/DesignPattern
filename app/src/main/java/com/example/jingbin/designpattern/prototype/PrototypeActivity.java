@@ -50,6 +50,5 @@ public class PrototypeActivity extends AppCompatActivity {
             Shape shapeCache = ShapeCache.getShape("3");
             LogUtil.i(TAG, "Shape: " + shapeCache.type);
         });
-
     }
 }

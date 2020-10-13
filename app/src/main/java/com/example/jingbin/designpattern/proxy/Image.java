@@ -6,5 +6,6 @@ package com.example.jingbin.designpattern.proxy;
  */
 
 public interface Image {
+
     void display();
 }

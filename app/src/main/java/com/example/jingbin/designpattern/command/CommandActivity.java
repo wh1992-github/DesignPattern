@@ -29,20 +29,20 @@ public class CommandActivity extends AppCompatActivity implements View.OnClickLi
     TextView tvDefine;
     @BindView(R.id.bt_zero)
     Button btZero;
-    @BindView(R.id.bt_three)
-    Button btThree;
-    @BindView(R.id.bt_six)
-    Button btSix;
     @BindView(R.id.bt_one)
     Button btOne;
-    @BindView(R.id.bt_four)
-    Button btFour;
-    @BindView(R.id.bt_seven)
-    Button btSeven;
     @BindView(R.id.bt_two)
     Button btTwo;
+    @BindView(R.id.bt_three)
+    Button btThree;
+    @BindView(R.id.bt_four)
+    Button btFour;
     @BindView(R.id.bt_five)
     Button btFive;
+    @BindView(R.id.bt_six)
+    Button btSix;
+    @BindView(R.id.bt_seven)
+    Button btSeven;
     @BindView(R.id.bt_no)
     Button btNo;
 
@@ -85,17 +85,17 @@ public class CommandActivity extends AppCompatActivity implements View.OnClickLi
          */
         controlPanel = new ControlPanel();
         controlPanel.setCommands(0, new DoorOpenCommand(door));//开门
-        controlPanel.setCommands(3, new DoorCloseCommand(door));//关门
-        controlPanel.setCommands(1, new LightOnCommand(light));//开灯
-        controlPanel.setCommands(4, new LightOffCommand(light));//关灯
-        controlPanel.setCommands(2, new ComputerOnCommand(computer));//开电脑
+        controlPanel.setCommands(1, new DoorCloseCommand(door));//关门
+        controlPanel.setCommands(2, new LightOnCommand(light));//开灯
+        controlPanel.setCommands(3, new LightOffCommand(light));//关灯
+        controlPanel.setCommands(4, new ComputerOnCommand(computer));//开电脑
         controlPanel.setCommands(5, new ComputerOffCommand(computer));//关电脑
-//      controlPanel.keyPressed(8);//这个没有设置命令,但不会出问题,因为我们的NoCommand的功劳
 
         QuickCommand quickOpenCommand = new QuickCommand(new Command[]{new LightOnCommand(light), new ComputerOnCommand(computer), new DoorOpenCommand(door)});
         QuickCommand quickCloseCommand = new QuickCommand(new Command[]{new LightOffCommand(light), new ComputerOffCommand(computer), new DoorCloseCommand(door)});
         controlPanel.setCommands(6, quickOpenCommand);
         controlPanel.setCommands(7, quickCloseCommand);
+        //controlPanel.setCommands(8);//这个没有设置命令,但不会出问题,因为我们的NoCommand的功劳
     }
 
     @Override

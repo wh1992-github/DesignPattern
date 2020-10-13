@@ -10,6 +10,7 @@ package com.example.jingbin.designpattern.state.better;
  */
 
 public interface State {
+
     /**
      * 放钱
      */

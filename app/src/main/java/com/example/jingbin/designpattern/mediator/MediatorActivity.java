@@ -31,12 +31,10 @@ public class MediatorActivity extends AppCompatActivity {
         binding.btUser1.setOnClickListener(v -> {
             User jingbin = new User("jingbin");
             jingbin.sendMessage("Hi~ youlookwhat!");
-            //---: Sun Feb 02 08:11:47 GMT+00:00 2020 [jingbin] : Hi~ youlookwhat!
         });
         binding.btUser2.setOnClickListener(v -> {
-            User jingbin = new User("youlookwhat");
-            jingbin.sendMessage("Hi~ jingbin!");
-            //---: Sun Feb 02 08:11:49 GMT+00:00 2020 [youlookwhat] : Hi~ jingbin!
+            User youlookwhat = new User("youlookwhat");
+            youlookwhat.sendMessage("Hi~ jingbin!");
         });
     }
 }

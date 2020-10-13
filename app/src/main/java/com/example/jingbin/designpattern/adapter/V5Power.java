@@ -9,5 +9,4 @@ package com.example.jingbin.designpattern.adapter;
 public interface V5Power {
 
     int provideV5Power();
-
 }

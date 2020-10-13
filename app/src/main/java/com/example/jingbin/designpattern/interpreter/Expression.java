@@ -6,5 +6,6 @@ package com.example.jingbin.designpattern.interpreter;
  */
 
 public interface Expression {
+
     boolean interpreter(String content);
 }

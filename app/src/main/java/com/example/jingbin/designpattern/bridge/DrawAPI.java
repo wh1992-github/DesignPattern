@@ -8,5 +8,4 @@ package com.example.jingbin.designpattern.bridge;
 public interface DrawAPI {
 
     void drawCircle(int radius, int x, int y);
-
 }

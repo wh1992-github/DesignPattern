@@ -31,34 +31,21 @@ public class MementoActivity extends AppCompatActivity {
         binding.btUseMemento.setOnClickListener(v -> {
             //管理者
             CareTaker careTaker = new CareTaker();
-
             Originator originator = new Originator();
             originator.setState("State #1");
             originator.setState("State #2");
-
             //保存状态
             careTaker.add(originator.setSateToMemento());
-
             originator.setState("State #3");
-
             //保存状态
             careTaker.add(originator.setSateToMemento());
-
             originator.setState("State #4");
-
             LogUtil.i(TAG, "Current State: " + originator.getState());
             //得到保存的状态
             String fromMemento1 = originator.getStateFromMemento(careTaker.get(0));
             LogUtil.i(TAG, "First Saved State: " + fromMemento1);
             String fromMemento2 = originator.getStateFromMemento(careTaker.get(1));
             LogUtil.i(TAG, "Second Saved State: " + fromMemento2);
-
-            /*
-             * /---: Current State: State #4
-             * /---: First Saved State: State #2
-             * /---: Second Saved State: State #3
-             */
         });
-
     }
 }

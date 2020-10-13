@@ -12,7 +12,6 @@ public class ControlPanel {
     private Command[] commands;
 
     public ControlPanel() {
-
         commands = new Command[CONTROL_SIZE];
         for (int i = 0; i < CONTROL_SIZE; i++) {
             commands[i] = new NoCommand();
