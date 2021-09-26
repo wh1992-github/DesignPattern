@@ -8,7 +8,7 @@
         android:orientation="vertical"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        tools:context="com.example.jingbin.designpattern.MainActivity">
+        tools:context="com.example.designpattern1.MainActivity">
 
         <me.jingbin.library.ByRecyclerView
             android:id="@+id/recyclerView"
